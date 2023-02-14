@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Deloitte_CookieConsent::cookie_consent" title="Cookie Consent" translate="title" module="Deloitte_CookieConsent" sortOrder="50" parent="Magento_Customer::customer" resource="Deloitte_CookieConsent::cookie_consent"/>
+        <add id="Deloitte_CookieConsent::cookie_groups" title="Cookie Groups" module="Deloitte_CookieConsent" sortOrder="10" parent="Deloitte_CookieConsent::cookie_consent" resource="Deloitte_CookieConsent::cookie_consent_cookie_groups" action="deloitte_cookie_consent/cookiegroup/index"/>
+    </menu>
+</config>

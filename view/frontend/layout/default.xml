@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="deloitte_cookie_consent_notice"
+                   template="Deloitte_CookieConsent::notice.phtml"
+                   ifconfig="deloitte_cookie_consent/general/enabled"
+                   after="-">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Deloitte\CookieConsent\ViewModel\Cookie</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template"
+                   name="deloitte_cookie_consent_modal"
+                   template="Deloitte_CookieConsent::modal/preferences.phtml"
+                   ifconfig="deloitte_cookie_consent/general/enabled"
+                   before="deloitte_cookie_consent_notice">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Deloitte\CookieConsent\ViewModel\Cookie</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
